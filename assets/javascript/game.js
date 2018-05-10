@@ -1,7 +1,3 @@
-
-
-<script type="text/javascript">
-
         /*computer needs to make a choice-array*/
 
         /*user needs to make a choice-array*/
@@ -20,9 +16,9 @@
             winsP.innerHTML = wins;
             losesP.innerHTML = loses;
             guessLeft.innerHTML = guessesLeft;
-            letterGuessed.innerHTML = guessedLetters.join(','); */
+            letterGuessed.innerHTML = guessedLetters.join(','); 
  
-            /*capture choices
+            capture choices
 
                  function.(){
                      document.getElementById().innerhtml = "Enter your guess and then click the button"
@@ -30,13 +26,13 @@
 
                 var arr = [];
                 for(var i = 0; i < 10; i++)
-                arr.push(prompt("Enter a number");*/
+                arr.push(prompt("Enter a number");
 
 
-            /*read on the keyboard if the user is pressing something or not
-            use -> alert("working!") <-  under the doc.onkey to test it out. */
+            read on the keyboard if the user is pressing something or not
+            use -> alert("working!") <-  under the doc.onkey to test it out. 
     
-            /*compare the choices made and determine a win or a loss*/
+            compare the choices made and determine a win or a loss*/
 
 document.onkeyup = function(event) {
     var userguess = event.key;
@@ -62,5 +58,3 @@ document.onkeyup = function(event) {
     console.log(computerGuess);
 
             /* when I tried to save this, the computer asked if i wanted to save this as code.workspace- any idea what that is?*/
-
-</script>
