@@ -6,55 +6,48 @@
     var wins = 0;
     var losses = 0;
     var guessesLeft = 9;
-    var guessedLetters = [/*?*/] /*array of user choices*/function display() {
-    }
-            /*
-            var winsP = document.getElementById("wins");
-            var losesP = document.getElementById("loses");
-            var guessLeft = document.getElementById("guessLeft");
-            var letterGuessed = document.getElementById("guessed");
-            winsP.innerHTML = wins;
-            losesP.innerHTML = loses;
-            guessLeft.innerHTML = guessesLeft;
-            letterGuessed.innerHTML = guessedLetters.join(','); 
- 
-            capture choices
-
-                 function.(){
-                     document.getElementById().innerhtml = "Enter your guess and then click the button"
-             } 
-
-                var arr = [];
-                for(var i = 0; i < 10; i++)
-                arr.push(prompt("Enter a number");
-
-
-            read on the keyboard if the user is pressing something or not
-            use -> alert("working!") <-  under the doc.onkey to test it out. 
-    
-            compare the choices made and determine a win or a loss*/
+    var guessedLetters;
 
 document.onkeyup = function(event) {
-    var userguess = event.key;
-    if (guess === letterToGuess) {
-            win(/*add to win count*/);
-        } else if (guessesLeft - 1 === 0) {
-            lost (/*add to loss count*/);
-        } else {
-            fail(guess);
-        }
+    var userGuess = event.key;
+    var computerGuess = options[Math.floor(Math.random() * options.length)];
+    console.log(userGuess);
+
+    var span = document.createElement("span");
+    var t = document.createTextNode(userGuess);
+    span.appendChild(t);
+    document.getElementById("guesses").appendChild(span);
+
+    function fail(){};
+    function win(){};
+function startGame(){
+        if (userGuess === computerGuess) {
+            wins++;
+            //alert ("you have won " + wins + " times")
+            document.getElementById("wins").innerText = wins;
+            // debugger;
+        } else  {
+            losses++;
+            //alert ("you have lost " + losses + " times")
+            document.getElementById("losses").innerText = losses;
+        } 
+    }
+    if (losses < 9) {
+    startGame();       
+    }
+    else {
+        alert("you lost too many times");
+    }
+    
         display();
     }
-    console.log(userguess);
     
-    resetGame();
-    display();
+    function resetGame(){};
+    function display(){};
 
 
             /*have computer choose letters from the above array*/
 
-    var computerGuess = options[Math.floor(Math.random()*options.length)];
-
-    console.log(computerGuess);
+    
 
             /* when I tried to save this, the computer asked if i wanted to save this as code.workspace- any idea what that is?*/
