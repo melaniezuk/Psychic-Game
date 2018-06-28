@@ -8,17 +8,73 @@
     <script src="assets/javascript/game.js"></script>
 </head>
 <body>
+  <style>
+
+    body {
+        font-family: Arial;
+        color: white;
+    }
+    .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .left {
+        left: 0;
+        background-color: #111;
+    }
+    .right {
+        right: 0;
+        /*background-color: red;*/
+        color:#111;      
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .centered img {
+        width: 150px;
+        border-radius: 50%;
+    }
+    h4 {
+        color: red;
+    }
+</style>
+</head>
+
+<body>
     
-        <!--Write out the informtion
-        computer needs to make a choice
-        then user needs to make a choice of a random letter
-        capture those choices
-        compare the choices made and determine a win or a loss
-        display the result to the user
-        -->
-
-        <!--write out the information-->
-
+ <div class="split left">
+        <div class="centered">
+            <img src="assets/images/Psychic_Juju.png" width="50%" height="50%">     
+    </div>
+    
+    <div class="split right">
+        <div class="centered">
+            <div id="game">
+                <h1>Samir's Game of Guessing</h1>
+                <h4>no thinking. just guessing.</h4> 
+                <br>
+                <br>
+                <h4> Wins : <span id='wins'>0</span></h4>
+                <h4>Losses: <span id='losses'>0</span></h4>
+                <h4>Guesses Left: 9 </h4>
+                <br>
+                <h4>Your guesses so far:</h4><div id="guesses"></div>
+            </div>
+        </div>
+      <img src="assets/images/Cute-Grey-Seamless-Pattern-For-Website-Background.jpg" width="100%" height="100%"> >
+    </div>
+ </div>
+    
+       
 <div id="game">
     <h1>The Psychic Game</h1>
     <h4>Guess what letter I'm thinking of:</h4>
@@ -26,10 +82,10 @@
     <h4>Losses: <span id='losses'>0</span></h4>
     <h4>Guesses Left: 9 </h4>
     <h4>Your guesses so far:</h4><div id="guesses"></div>
-
 </div>
 
-   <!-- <img src="assets/images/magicball.jpg" alt="Swirling Energy Image" width="100%" height="100%">  -->
+   <!--<img src="assets/images/Light-Grey-Background-Hd-5.jpg" width="100%" height="100%">  
+   <img src="assets/images/Psychic_Juju.png" width="50%" height="50%">-->
 
 
         
@@ -38,3 +94,13 @@
 
 </body>
 </html>
+
+ <!--Write out the informtion
+        computer needs to make a choice
+        then user needs to make a choice of a random letter
+        capture those choices
+        compare the choices made and determine a win or a loss
+        display the result to the user
+        -->
+
+        <!--write out the information-->

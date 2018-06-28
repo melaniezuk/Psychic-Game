@@ -11,7 +11,7 @@
 document.onkeyup = function(event) {
     var userGuess = event.key;
     var computerGuess = options[Math.floor(Math.random() * options.length)];
-    console.log(userGuess);
+    //console.log(userGuess);
 
     var span = document.createElement("span");
     var t = document.createTextNode(userGuess);
@@ -36,7 +36,7 @@ function startGame(){
     startGame();       
     }
     else {
-        alert("you lost too many times");
+        alert("you lost. try again, loser.");
     }
     
         display();
